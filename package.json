@@ -2,9 +2,15 @@
   "name": "esm-playground",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js"
+  },
   "scripts": {
-    "build": "tsc"
+    "build:esm": "tsc",
+    "build:cjs": "babel lib --out-dir dist --extensions .ts --out-file-extension .cjs"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +19,11 @@
     "@rdfjs/types": "^1.1.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7",
+    "@babel/core": "^7",
+    "@babel/preset-env": "^7",
+    "@babel/preset-typescript": "^7",
+    "babel-plugin-add-import-extension": "^1.6.0",
     "typescript": "^5.5.3"
   },
   "type": "module"

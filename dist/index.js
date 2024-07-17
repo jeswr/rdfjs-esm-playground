@@ -1,2 +1,1 @@
-// import type { Quad } from "@rdfjs/types";
-export var q = [];
+export const q = [];
