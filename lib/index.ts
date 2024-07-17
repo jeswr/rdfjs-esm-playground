@@ -1,3 +1,3 @@
-import type { Quad } from "@rdfjs/types";
+import { Quad } from "@rdfjs/types";
 
-
+export const q: Quad[] = [];
