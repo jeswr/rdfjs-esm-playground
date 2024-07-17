@@ -1,2 +1,2 @@
-// import type { Quad } from "@rdfjs/types";
-export var q = [];
+import quads from './quads.js';
+export const q = quads;
